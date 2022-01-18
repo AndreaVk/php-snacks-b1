@@ -1,5 +1,4 @@
-
-<?php
+<!--<?php
 $group = [
     [
         "squadraCasa" => "Olimpia Milano",
@@ -53,4 +52,18 @@ $group = [
     </ul>
     
 </body>
-</html>
+</html>-->
+
+
+<?php 
+$nome = $_GET['nome'];
+$mail = $_GET['mail'];
+$eta = $_GET['eta'];
+
+if(strlen($nome) > 3 && is_numeric($eta) && strpos($mail, '.') !== false && strpos($mail, '@') !== false){
+    echo "Accesso consentito";
+}
+else{
+    echo "Accesso non consentito!";
+}
+?>
